@@ -1,5 +1,6 @@
 from json import dumps
 from kafka import KafkaProducer
+from time import sleep
 
 
 producer = KafkaProducer(
@@ -9,4 +10,5 @@ producer = KafkaProducer(
 
 while True:
     val = input("")
+    sleep(0.1)
     producer.send('raw', value=val)

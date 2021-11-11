@@ -1,5 +1,6 @@
 from kafka import KafkaConsumer
 from json import loads
+from time import sleep
 
 
 consumer = KafkaConsumer(
@@ -13,4 +14,5 @@ consumer = KafkaConsumer(
 
 for event in consumer:
     event_data = event.value
+    sleep(0.1)
     print(f"array: {event_data}")

@@ -1,0 +1,1 @@
+docker exec -it kafka-docker-kafka-1 /opt/kafka/bin/kafka-topics.sh --list --zookeeper zookeeper:2181 

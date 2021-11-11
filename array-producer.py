@@ -1,6 +1,6 @@
 from kafka import KafkaProducer, KafkaConsumer
 from json import loads, dumps
-
+from time import sleep
 
 consumer = KafkaConsumer(
     'raw',
@@ -24,6 +24,7 @@ for event in consumer:
     array.append(event_data)
     
     # reset the array if empty
-    if event_data == "":
-        array.clear()
+    # if event_data == "":
+    #     array.clear()
+    sleep(0.1)
     producer.send('array', value=array)

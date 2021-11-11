@@ -1,0 +1,1 @@
+docker exec -it kafka-docker-kafka-1 /opt/kafka/bin/kafka-topics.sh --delete --zookeeper zookeeper:2181 --topic "$1"

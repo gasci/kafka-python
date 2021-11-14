@@ -1,10 +1,11 @@
 from json import dumps
 from kafka import KafkaProducer
 from time import sleep
+from settings import BOOTSTRAP_SERVERS
 
 
 producer = KafkaProducer(
-    bootstrap_servers=['localhost:9092'],
+    bootstrap_servers=BOOTSTRAP_SERVERS,
     value_serializer=lambda x: dumps(x).encode('utf-8')
 )
 

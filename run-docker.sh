@@ -1,1 +1,1 @@
-docker-compose -f $KAFKA_REPO_PATH/kafka-docker/docker-compose-expose.yml up -d --remove-orphans;
+docker-compose -f $KAFKA_REPO_PATH/kafka-docker/docker-compose-expose.yml up --force-recreate # --scale kafka=2 #-d --remove-orphans;
